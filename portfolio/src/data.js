@@ -137,3 +137,14 @@ export const EDUCATION = [
     type: 'Undergraduate',
   },
 ]
+
+export const INTERNSHIP = {
+  role: 'Cloud Computing Intern',
+  company: 'Rooman Technologies',
+  period: 'Internship',
+  points: [
+    'Worked on Linux server administration, deployment workflows and cloud infrastructure fundamentals.',
+    'Assisted in application hosting, monitoring and environment configuration.',
+  ],
+}
+

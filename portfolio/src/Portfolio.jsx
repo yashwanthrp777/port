@@ -20,6 +20,7 @@ import {
   Code2,
   Layers,
   GraduationCap,
+  Briefcase,
   X,
   ArrowUpRight,
   Send,
@@ -29,6 +30,7 @@ import {
   INITIAL_SKILLS,
   INITIAL_PROJECTS,
   EDUCATION,
+  INTERNSHIP,
 } from './data.js'
 
 export default function Portfolio({ onRelight, muted, onToggleMute }) {
@@ -381,6 +383,38 @@ export default function Portfolio({ onRelight, muted, onToggleMute }) {
             ))}
           </div>
         </section>
+
+        {/* Internship Experience */}
+        {INTERNSHIP && (
+          <section className="resume-section">
+            <div className="section-title-bar">
+              <div>
+                <span className="section-tag">WORK EXPERIENCE</span>
+                <h2 className="section-h2">Internship</h2>
+              </div>
+            </div>
+
+            <div className="resume-project-card">
+              <div className="project-header-row">
+                <div>
+                  <span className="project-index">PRACTICAL TRAINING</span>
+                  <h3 className="project-name">
+                    {INTERNSHIP.role} <span className="text-gold">@ {INTERNSHIP.company}</span>
+                  </h3>
+                </div>
+              </div>
+
+              <ul className="project-points-list">
+                {INTERNSHIP.points.map((pt, i) => (
+                  <li key={i} className="point-item">
+                    <span className="point-bullet" />
+                    <span>{pt}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         {/* Education Section from Resume */}
         <section className="resume-section">
